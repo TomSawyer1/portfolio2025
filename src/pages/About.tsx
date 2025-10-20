@@ -3,6 +3,7 @@ import { Section } from '@/components/Section'
 import { Card } from '@/components/Card'
 import { motion } from 'framer-motion'
 import siteData from '@/data/site.json'
+import { useTheme } from '@/lib/useTheme'
 
 // Tech logos/icons mapping
 const techLogos: Record<string, string> = {
@@ -28,6 +29,7 @@ const techLogos: Record<string, string> = {
 
 export function About() {
   const { t } = useTranslation()
+  const theme = useTheme()
 
   const skillCategories = [
     {
@@ -66,62 +68,66 @@ export function About() {
             <Card>
               <div className="mb-6">
                 <img
-                  src={siteData.profileImage}
+                  src={theme === 'dark' ? '/images/thomasbvb.jpg' : '/images/thomasarsenal.jpg'}
                   alt={siteData.name}
-                  className="mx-auto h-48 w-48 rounded-full border-4 border-primary/30 object-cover"
+                  className={`mx-auto h-48 w-48 rounded-full border-4 object-cover ${
+                    theme === 'dark' ? 'border-primary-dark/30' : 'border-primary-light/30'
+                  }`}
                 />
               </div>
 
-              <h2 className="mb-2 text-center text-2xl font-bold">{siteData.name}</h2>
-              <p className="mb-4 text-center text-lg text-primary">{siteData.role}</p>
-              <p className="mb-6 text-center text-sm text-neutral-400">{siteData.location}</p>
+              <h2 className="mb-2 text-center text-2xl font-bold dark:text-neutral-100 light:text-neutral-900">{siteData.name}</h2>
+              <p className={`mb-4 text-center text-lg ${
+                theme === 'dark' ? 'text-primary-dark' : 'text-primary-light'
+              }`}>{siteData.role}</p>
+              <p className="mb-6 text-center text-sm text-neutral-400 dark:text-neutral-400 light:text-neutral-600">{siteData.location}</p>
 
-              <div className="space-y-4 text-neutral-300">
+              <div className="space-y-4 text-neutral-300 dark:text-neutral-300 light:text-neutral-700">
                 <p>{t('about.description')}</p>
                 
                 <div className="space-y-2">
-                  <h3 className="font-semibold text-primary">Compétences clés :</h3>
+                  <h3 className="font-semibold text-primary dark:text-primary-dark light:text-primary-light">Compétences clés :</h3>
                   <ul className="space-y-1 text-sm">
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Développement full-stack (React, Node.js, Java)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Applications mobiles (React Native, Android)</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Architecture scalable et bonnes pratiques</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>UI/UX design avec Figma et TailwindCSS</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Intégrations API et paiements (Stripe)</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="font-semibold text-primary">Soft skills :</h3>
+                  <h3 className="font-semibold text-primary dark:text-primary-dark light:text-primary-light">Soft skills :</h3>
                   <ul className="space-y-1 text-sm">
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Communication et travail d'équipe</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Résolution de problèmes créative</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Apprentissage continu et curiosité</span>
                     </li>
                     <li className="flex gap-2">
-                      <span className="text-primary">▸</span>
+                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
                       <span>Méthodologie Agile</span>
                     </li>
                   </ul>
@@ -136,7 +142,7 @@ export function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <h2 className="mb-6 text-2xl font-bold">{t('about.stackTitle')}</h2>
+            <h2 className="mb-6 text-2xl font-bold dark:text-neutral-100 light:text-neutral-900">{t('about.stackTitle')}</h2>
             
             <div className="space-y-6">
               {skillCategories.map((category, index) => (
@@ -147,17 +153,17 @@ export function About() {
                   transition={{ delay: 0.4 + index * 0.1 }}
                 >
                   <Card>
-                    <h3 className="mb-4 text-xl font-bold text-primary">{category.title}</h3>
+                    <h3 className="mb-4 text-xl font-bold text-primary dark:text-primary-dark light:text-primary-light">{category.title}</h3>
                     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                       {category.skills.map((skill) => (
                         <div
                           key={skill}
-                          className="group flex flex-col items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 transition-all hover:border-primary/50 hover:bg-neutral-900"
+                          className="group flex flex-col items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 transition-all hover:border-primary/50 hover:bg-neutral-900 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-primary-dark/50 light:border-neutral-300 light:bg-neutral-50 light:hover:border-primary-light/50 light:hover:bg-neutral-100"
                         >
                           <span className="text-3xl transition-transform group-hover:scale-110">
                             {techLogos[skill] || '⚙️'}
                           </span>
-                          <span className="text-center text-xs font-medium text-neutral-300 group-hover:text-primary">
+                          <span className="text-center text-xs font-medium text-neutral-300 group-hover:text-primary dark:text-neutral-300 dark:group-hover:text-primary-dark light:text-neutral-700 light:group-hover:text-primary-light">
                             {skill}
                           </span>
                         </div>
@@ -176,12 +182,12 @@ export function About() {
               className="mt-8"
             >
               <Card>
-                <h3 className="mb-4 text-lg font-bold">Toutes les technologies</h3>
+                <h3 className="mb-4 text-lg font-bold dark:text-neutral-100 light:text-neutral-900">Toutes les technologies</h3>
                 <div className="flex flex-wrap gap-2">
                   {[...siteData.skillsPrimary, ...siteData.skillsSecondary].map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-sm font-medium text-primary"
+                      className="rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-sm font-medium text-primary dark:border-primary-dark/30 dark:bg-primary-dark/5 dark:text-primary-dark light:border-primary-light/40 light:bg-primary-light/10 light:text-primary-light"
                     >
                       {skill}
                     </span>

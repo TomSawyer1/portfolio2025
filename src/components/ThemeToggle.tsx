@@ -30,9 +30,9 @@ export function ThemeToggle() {
       title={theme === 'dark' ? t('theme.light') : t('theme.dark')}
     >
       {theme === 'dark' ? (
-        <Sun className="h-5 w-5 text-primary" />
+        <Sun className="h-5 w-5 text-primary-dark" />
       ) : (
-        <Moon className="h-5 w-5 text-primary" />
+        <Moon className="h-5 w-5 text-primary-light" />
       )}
     </button>
   )

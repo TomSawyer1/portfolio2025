@@ -4,9 +4,11 @@ import { motion } from 'framer-motion'
 import { Download, ArrowRight, Code2, Rocket, Zap } from 'lucide-react'
 import siteData from '@/data/site.json'
 import { Link } from 'react-router-dom'
+import { useTheme } from '@/lib/useTheme'
 
 export function Home() {
   const { t } = useTranslation()
+  const theme = useTheme()
 
   const stats = [
     { label: t('home.statsYears'), value: siteData.stats.yearsExperience, icon: Zap },
@@ -38,10 +40,10 @@ export function Home() {
                 transition={{ delay: 0.2 }}
                 className="mb-6"
               >
-                <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary">
+                <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-sm font-medium text-primary dark:border-primary-dark/30 dark:bg-primary-dark/5 dark:text-primary-dark light:border-primary-light/30 light:bg-primary-light/5 light:text-primary-light">
                   <span className="relative flex h-2 w-2">
-                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75"></span>
-                    <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75 dark:bg-primary-dark light:bg-primary-light"></span>
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-primary dark:bg-primary-dark light:bg-primary-light"></span>
                   </span>
                   {t('nav.home')} — {siteData.location}
                 </span>
@@ -69,7 +71,7 @@ export function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mb-8 text-lg text-neutral-400 max-w-xl"
+                className="mb-8 text-lg text-neutral-400 max-w-xl dark:text-neutral-400 light:text-neutral-700"
               >
                 {t('home.subtitle')}
               </motion.p>
@@ -99,16 +101,24 @@ export function Home() {
               className="relative"
             >
               <div className="relative mx-auto aspect-square w-full max-w-md">
-                {/* Glow effect */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary via-primary-600 to-primary blur-3xl opacity-20 animate-pulse" />
+                {/* Glow effect - BVB yellow in dark, Arsenal red in light */}
+                <div className={`absolute inset-0 rounded-full blur-3xl opacity-20 animate-pulse ${
+                  theme === 'dark' 
+                    ? 'bg-gradient-to-r from-primary-dark via-primary-dark-600 to-primary-dark' 
+                    : 'bg-gradient-to-r from-primary-light via-primary-light-600 to-primary-light'
+                }`} />
                 
-                {/* Ring */}
-                <div className="absolute inset-0 rounded-full border-4 border-primary/30 animate-pulse" />
-                <div className="absolute inset-4 rounded-full border-2 border-primary/20" />
+                {/* Ring - BVB yellow in dark, Arsenal red in light */}
+                <div className={`absolute inset-0 rounded-full border-4 animate-pulse ${
+                  theme === 'dark' ? 'border-primary-dark/30' : 'border-primary-light/30'
+                }`} />
+                <div className={`absolute inset-4 rounded-full border-2 ${
+                  theme === 'dark' ? 'border-primary-dark/20' : 'border-primary-light/20'
+                }`} />
                 
-                {/* Image */}
+                {/* Image - Change based on theme */}
                 <img
-                  src={siteData.profileImage}
+                  src={theme === 'dark' ? '/images/thomasbvb.jpg' : '/images/thomasarsenal.jpg'}
                   alt={siteData.name}
                   className="relative z-10 h-full w-full rounded-full object-cover p-2"
                 />
@@ -119,7 +129,7 @@ export function Home() {
       </section>
 
       {/* Stats Section */}
-      <Section className="bg-card-dark/50">
+      <Section className="bg-card-dark/50 dark:bg-card-dark/50 light:bg-neutral-50">
         <div className="grid gap-8 sm:grid-cols-3">
           {stats.map((stat, index) => (
             <motion.div
@@ -128,11 +138,11 @@ export function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-xl border border-neutral-800 bg-card-dark p-6 text-center transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20"
+              className="group relative overflow-hidden rounded-xl border border-neutral-800 bg-card-dark p-6 text-center transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/20 dark:border-neutral-800 dark:bg-card-dark light:border-neutral-300 light:bg-white light:shadow-md light:hover:border-primary-light/60 light:hover:shadow-primary-light/20"
             >
-              <stat.icon className="mx-auto mb-4 h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+              <stat.icon className="mx-auto mb-4 h-10 w-10 text-primary transition-transform group-hover:scale-110 dark:text-primary-dark light:text-primary-light" />
               <p className="mb-2 text-4xl font-bold gradient-text">{stat.value}</p>
-              <p className="text-sm text-neutral-400">{stat.label}</p>
+              <p className="text-sm text-neutral-400 dark:text-neutral-400 light:text-neutral-600">{stat.label}</p>
             </motion.div>
           ))}
         </div>
@@ -147,14 +157,15 @@ export function Home() {
           className="text-center"
         >
           <h2 className="heading-md mb-6">
-            Découvrez mon <span className="gradient-text">parcours</span>
+            {t('home.discoverJourney').split(' ').slice(0, -1).join(' ')}{' '}
+            <span className="gradient-text">{t('home.discoverJourney').split(' ').pop()}</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/projects" className="btn-primary">
-              Voir mes projets
+              {t('home.viewProjects')}
             </Link>
             <Link to="/about" className="btn-secondary">
-              En savoir plus
+              {t('home.learnMore')}
             </Link>
           </div>
         </motion.div>

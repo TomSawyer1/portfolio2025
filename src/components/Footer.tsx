@@ -13,11 +13,11 @@ export function Footer() {
   ]
 
   return (
-    <footer className="border-t border-neutral-800/50 bg-card-dark">
+    <footer className="border-t border-neutral-800/50 bg-card-dark dark:border-neutral-800/50 dark:bg-card-dark light:border-neutral-300 light:bg-neutral-50">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           {/* Copyright */}
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-neutral-400 dark:text-neutral-400 light:text-neutral-600">
             © {currentYear} {siteData.name}. {t('footer.rights')}.
           </p>
 
@@ -29,7 +29,7 @@ export function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-neutral-400 transition-colors hover:text-primary"
+                className="text-neutral-400 transition-colors hover:text-primary dark:text-neutral-400 dark:hover:text-primary-dark light:text-neutral-600 light:hover:text-primary-light"
                 aria-label={social.label}
               >
                 <social.icon className="h-5 w-5" />
@@ -38,10 +38,10 @@ export function Footer() {
           </div>
 
           {/* Made with love */}
-          <p className="flex items-center gap-1 text-sm text-neutral-400">
+          <p className="flex items-center gap-1 text-sm text-neutral-400 dark:text-neutral-400 light:text-neutral-600">
             {t('footer.madeWith')}{' '}
-            <Heart className="h-4 w-4 fill-primary text-primary" /> {t('footer.by')}{' '}
-            <span className="font-semibold text-primary">{siteData.name}</span>
+            <Heart className="h-4 w-4 fill-primary text-primary dark:fill-primary-dark dark:text-primary-dark light:fill-primary-light light:text-primary-light" /> {t('footer.by')}{' '}
+            <span className="font-semibold text-primary dark:text-primary-dark light:text-primary-light">{siteData.name}</span>
           </p>
         </div>
       </div>
