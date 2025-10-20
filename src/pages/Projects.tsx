@@ -28,15 +28,20 @@ export function Projects() {
   const filteredProjects = useMemo(() => {
     return projectsData.filter((project) => {
       const matchesTag = selectedTag === 'all' || project.tags.includes(selectedTag)
+      
+      // Get translated title and summary for search
+      const title = t(`projectsData.${project.id}.title`)
+      const summary = t(`projectsData.${project.id}.summary`)
+      
       const matchesSearch =
         searchQuery === '' ||
-        project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.stack.some((tech) => tech.toLowerCase().includes(searchQuery.toLowerCase()))
       
       return matchesTag && matchesSearch
     })
-  }, [selectedTag, searchQuery])
+  }, [selectedTag, searchQuery, t])
 
   const handleTagClick = (tag: string) => {
     if (tag === 'all') {
@@ -55,8 +60,8 @@ export function Projects() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-12 text-center"
         >
-          <h1 className="heading-lg mb-4">{t('projects.title')}</h1>
-          <p className="text-lg text-neutral-400">{t('projects.subtitle')}</p>
+          <h1 className="heading-lg mb-4 dark:text-neutral-100 light:text-neutral-900">{t('projects.title')}</h1>
+          <p className="text-lg text-neutral-400 dark:text-neutral-400 light:text-neutral-700">{t('projects.subtitle')}</p>
         </motion.div>
 
         {/* Barre de recherche */}
@@ -136,10 +141,10 @@ export function Projects() {
           >
             <div className="mx-auto max-w-md">
               <div className="mb-4 text-6xl">🔍</div>
-              <h3 className="mb-2 text-xl font-bold text-neutral-100">
+              <h3 className="mb-2 text-xl font-bold text-neutral-100 dark:text-neutral-100 light:text-neutral-900">
                 {t('projects.noResults')}
               </h3>
-              <p className="text-neutral-400">
+              <p className="text-neutral-400 dark:text-neutral-400 light:text-neutral-600">
                 Essayez de modifier votre recherche ou vos filtres
               </p>
             </div>
@@ -151,7 +156,7 @@ export function Projects() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-8 text-center text-sm text-neutral-500"
+          className="mt-8 text-center text-sm text-neutral-500 dark:text-neutral-500 light:text-neutral-600"
         >
           {filteredProjects.length} projet{filteredProjects.length > 1 ? 's' : ''} affiché
           {filteredProjects.length > 1 ? 's' : ''}

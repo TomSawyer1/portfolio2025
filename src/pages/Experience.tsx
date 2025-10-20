@@ -15,8 +15,8 @@ export function Experience() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-12 text-center"
         >
-          <h1 className="heading-lg mb-4">{t('experience.title')}</h1>
-          <p className="text-lg text-neutral-400">{t('experience.subtitle')}</p>
+          <h1 className="heading-lg mb-4 dark:text-neutral-100 light:text-neutral-900">{t('experience.title')}</h1>
+          <p className="text-lg text-neutral-400 dark:text-neutral-400 light:text-neutral-700">{t('experience.subtitle')}</p>
         </motion.div>
 
         <motion.div

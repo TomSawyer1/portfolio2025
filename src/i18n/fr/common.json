@@ -13,7 +13,10 @@
     "ctaSecondary": "Télécharger mon CV",
     "statsYears": "Années d'expérience",
     "statsProjects": "Projets réalisés",
-    "statsTech": "Technologies"
+    "statsTech": "Technologies",
+    "discoverJourney": "Découvrez mon parcours",
+    "viewProjects": "Voir mes projets",
+    "learnMore": "En savoir plus"
   },
   "projects": {
     "title": "Projets",
@@ -57,7 +60,12 @@
     "emailPlaceholder": "votre@email.com",
     "messagePlaceholder": "Votre message...",
     "copyEmail": "Copier l'email",
-    "emailCopied": "Email copié !"
+    "emailCopied": "Email copié !",
+    "coordinates": "Coordonnées",
+    "availability": "Disponibilité",
+    "availableText": "Je suis actuellement <1>disponible</1> pour de nouvelles opportunités et collaborations.",
+    "responseTime": "Répond généralement en moins de 24h",
+    "sendMessage": "Envoyez-moi un message"
   },
   "footer": {
     "rights": "Tous droits réservés",
@@ -78,6 +86,68 @@
     "required": "Ce champ est requis",
     "invalidEmail": "Email invalide",
     "minLength": "Minimum {{min}} caractères"
+  },
+  "projectsData": {
+    "travelbuddy": {
+      "title": "Mobile App – TravelBuddy",
+      "summary": "App mobile qui affiche des lieux touristiques en fonction de l'orientation du téléphone, avec récupération de données en ligne."
+    },
+    "green-cafe": {
+      "title": "E-commerce Backend – Green Café",
+      "summary": "MVP backend pour boutique café: auth, produits, panier, paiements (Stripe)."
+    },
+    "dashboard-nextjs": {
+      "title": "Dashboard Next.js",
+      "summary": "Dashboard moderne avec charts, thème dark/light, filtrage avancé."
+    },
+    "social-app": {
+      "title": "Social Media App",
+      "summary": "Application sociale avec posts, commentaires, likes et profils utilisateurs."
+    },
+    "weather-android": {
+      "title": "Weather App Android",
+      "summary": "Application météo native Android avec géolocalisation et prévisions sur 7 jours."
+    },
+    "task-manager": {
+      "title": "Task Manager Vue.js",
+      "summary": "Gestionnaire de tâches collaboratif avec authentification et temps réel."
+    }
+  },
+  "experienceData": {
+    "freelance": {
+      "title": "Full-Stack Developer",
+      "company": "Freelance",
+      "location": "Remote",
+      "highlights": [
+        "Conception et développement d'applications React/React Native modernes",
+        "Mise en place d'APIs sécurisées (JWT, Prisma, PostgreSQL)",
+        "CI/CD basique, revues de code et optimisation des performances",
+        "Collaboration avec designers pour créer des interfaces utilisateur intuitives",
+        "Intégration de solutions de paiement (Stripe) et services cloud"
+      ]
+    },
+    "android-dev": {
+      "title": "Android Developer (Java)",
+      "company": "Projet académique",
+      "location": "Paris",
+      "highlights": [
+        "Développement d'une application météo avec Retrofit et géolocalisation GPS",
+        "Architecture modulaire suivant les principes SOLID",
+        "Mise en place de tests unitaires et d'intégration",
+        "Déploiement interne pour démonstration et feedback utilisateurs"
+      ]
+    },
+    "web-dev-intern": {
+      "title": "Web Developer Intern",
+      "company": "Tech Startup",
+      "location": "Paris",
+      "highlights": [
+        "Développement de composants React réutilisables pour la plateforme",
+        "Contribution à l'amélioration de l'UI/UX avec Figma et TailwindCSS",
+        "Participation aux daily standups et méthodologie Agile",
+        "Optimisation des performances frontend (lazy loading, code splitting)"
+      ]
+    }
   }
 }
 

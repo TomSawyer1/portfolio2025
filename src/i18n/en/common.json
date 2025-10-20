@@ -13,7 +13,10 @@
     "ctaSecondary": "Download CV",
     "statsYears": "Years of experience",
     "statsProjects": "Projects completed",
-    "statsTech": "Technologies"
+    "statsTech": "Technologies",
+    "discoverJourney": "Discover my journey",
+    "viewProjects": "View my projects",
+    "learnMore": "Learn more"
   },
   "projects": {
     "title": "Projects",
@@ -57,7 +60,12 @@
     "emailPlaceholder": "your@email.com",
     "messagePlaceholder": "Your message...",
     "copyEmail": "Copy email",
-    "emailCopied": "Email copied!"
+    "emailCopied": "Email copied!",
+    "coordinates": "Coordinates",
+    "availability": "Availability",
+    "availableText": "I am currently <1>available</1> for new opportunities and collaborations.",
+    "responseTime": "Usually responds within 24h",
+    "sendMessage": "Send me a message"
   },
   "footer": {
     "rights": "All rights reserved",
@@ -78,6 +86,68 @@
     "required": "This field is required",
     "invalidEmail": "Invalid email",
     "minLength": "Minimum {{min}} characters"
+  },
+  "projectsData": {
+    "travelbuddy": {
+      "title": "Mobile App – TravelBuddy",
+      "summary": "Mobile app that displays tourist places based on phone orientation, with online data retrieval."
+    },
+    "green-cafe": {
+      "title": "E-commerce Backend – Green Café",
+      "summary": "Backend MVP for coffee shop: auth, products, cart, payments (Stripe)."
+    },
+    "dashboard-nextjs": {
+      "title": "Dashboard Next.js",
+      "summary": "Modern dashboard with charts, dark/light theme, advanced filtering."
+    },
+    "social-app": {
+      "title": "Social Media App",
+      "summary": "Social application with posts, comments, likes and user profiles."
+    },
+    "weather-android": {
+      "title": "Weather App Android",
+      "summary": "Native Android weather app with geolocation and 7-day forecasts."
+    },
+    "task-manager": {
+      "title": "Task Manager Vue.js",
+      "summary": "Collaborative task manager with authentication and real-time features."
+    }
+  },
+  "experienceData": {
+    "freelance": {
+      "title": "Full-Stack Developer",
+      "company": "Freelance",
+      "location": "Remote",
+      "highlights": [
+        "Design and development of modern React/React Native applications",
+        "Implementation of secure APIs (JWT, Prisma, PostgreSQL)",
+        "Basic CI/CD, code reviews and performance optimization",
+        "Collaboration with designers to create intuitive user interfaces",
+        "Integration of payment solutions (Stripe) and cloud services"
+      ]
+    },
+    "android-dev": {
+      "title": "Android Developer (Java)",
+      "company": "Academic Project",
+      "location": "Paris",
+      "highlights": [
+        "Development of a weather app with Retrofit and GPS geolocation",
+        "Modular architecture following SOLID principles",
+        "Implementation of unit and integration tests",
+        "Internal deployment for demo and user feedback"
+      ]
+    },
+    "web-dev-intern": {
+      "title": "Web Developer Intern",
+      "company": "Tech Startup",
+      "location": "Paris",
+      "highlights": [
+        "Development of reusable React components for the platform",
+        "Contribution to UI/UX improvement with Figma and TailwindCSS",
+        "Participation in daily standups and Agile methodology",
+        "Frontend performance optimization (lazy loading, code splitting)"
+      ]
+    }
   }
 }
 
