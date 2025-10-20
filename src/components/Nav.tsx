@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ThemeToggle } from './ThemeToggle'
+// import { ThemeToggle } from './ThemeToggle'
 import { LangSwitch } from './LangSwitch'
 import { cn } from '@/lib/cn'
 import { Menu } from '@headlessui/react'
