@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Send, Loader2 } from 'lucide-react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser'
 
 const createContactSchema = (t: (key: string, opts?: any) => string) =>
   z.object({
@@ -34,19 +35,23 @@ export function ContactForm() {
     setSubmitStatus(null)
 
     try {
-      // Mock submission - replace with actual API call
-      // Example: await fetch('/api/contact', { method: 'POST', body: JSON.stringify(data) })
-      console.log('Form data:', data)
-      
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        message: data.message,
+        to_name: 'Thomas Spencer',
+      }
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
 
       setSubmitStatus('success')
       reset()
-      
-      // TODO: Intégrer EmailJS ou Formspree ici
-      // import emailjs from '@emailjs/browser'
-      // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', data, 'YOUR_PUBLIC_KEY')
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')
@@ -64,7 +69,7 @@ export function ContactForm() {
     >
       {/* Name */}
       <div>
-        <label htmlFor="name" className="mb-2 block text-sm font-medium text-neutral-300">
+        <label htmlFor="name" className="mb-2 block text-sm font-medium text-neutral-300 dark:text-neutral-300 light:text-neutral-700">
           {t('contact.name')}
         </label>
         <input
@@ -81,7 +86,7 @@ export function ContactForm() {
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="mb-2 block text-sm font-medium text-neutral-300">
+        <label htmlFor="email" className="mb-2 block text-sm font-medium text-neutral-300 dark:text-neutral-300 light:text-neutral-700">
           {t('contact.email')}
         </label>
         <input
@@ -98,7 +103,7 @@ export function ContactForm() {
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-medium text-neutral-300">
+        <label htmlFor="message" className="mb-2 block text-sm font-medium text-neutral-300 dark:text-neutral-300 light:text-neutral-700">
           {t('contact.message')}
         </label>
         <textarea
