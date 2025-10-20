@@ -1,0 +1,54 @@
+[
+  {
+    "id": "travelbuddy",
+    "title": "Mobile App – TravelBuddy",
+    "summary": "App mobile qui affiche des lieux touristiques en fonction de l'orientation du téléphone, avec récupération de données en ligne.",
+    "stack": ["React Native", "Expo", "i18n", "REST"],
+    "tags": ["react-native", "mobile", "maps"],
+    "github": "https://github.com/username/travelbuddy",
+    "demo": "https://demo.example.com/travelbuddy",
+    "images": ["/images/project1.jpg"]
+  },
+  {
+    "id": "green-cafe",
+    "title": "E-commerce Backend – Green Café",
+    "summary": "MVP backend pour boutique café: auth, produits, panier, paiements (Stripe).",
+    "stack": ["Node.js", "Prisma", "PostgreSQL", "Stripe"],
+    "tags": ["backend", "api", "payments"],
+    "github": "https://github.com/username/green-cafe"
+  },
+  {
+    "id": "dashboard-nextjs",
+    "title": "Dashboard Next.js",
+    "summary": "Dashboard moderne avec charts, thème dark/light, filtrage avancé.",
+    "stack": ["Next.js", "Tailwind", "Chart.js"],
+    "tags": ["nextjs", "dashboard", "tailwind"],
+    "github": "https://github.com/username/dashboard",
+    "demo": "https://dashboard.example.com"
+  },
+  {
+    "id": "social-app",
+    "title": "Social Media App",
+    "summary": "Application sociale avec posts, commentaires, likes et profils utilisateurs.",
+    "stack": ["React", "Firebase", "TailwindCSS"],
+    "tags": ["react", "firebase", "social"],
+    "github": "https://github.com/username/social-app"
+  },
+  {
+    "id": "weather-android",
+    "title": "Weather App Android",
+    "summary": "Application météo native Android avec géolocalisation et prévisions sur 7 jours.",
+    "stack": ["Java", "Android", "Retrofit", "GPS"],
+    "tags": ["android", "java", "mobile"],
+    "github": "https://github.com/username/weather-android"
+  },
+  {
+    "id": "task-manager",
+    "title": "Task Manager Vue.js",
+    "summary": "Gestionnaire de tâches collaboratif avec authentification et temps réel.",
+    "stack": ["Vue.js", "Node.js", "Socket.io", "MongoDB"],
+    "tags": ["vue", "realtime", "backend"],
+    "github": "https://github.com/username/task-manager"
+  }
+]
+

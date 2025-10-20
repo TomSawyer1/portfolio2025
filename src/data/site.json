@@ -1,0 +1,38 @@
+{
+  "name": "Spencer Thomas",
+  "role": "Full-Stack Developer",
+  "location": "Paris, France",
+  "email": "contact@spencerthomas.dev",
+  "github": "https://github.com/spencerthomas",
+  "linkedin": "https://www.linkedin.com/in/spencer-thomas/",
+  "resumeUrl": "/documents/Spencer Thomas Mastere.pdf",
+  "profileImage": "/images/thomasbvb.jpg",
+  "skillsPrimary": [
+    "React",
+    "React Native",
+    "TailwindCSS",
+    "Java",
+    "Android",
+    "Vue.js",
+    "Next.js",
+    "SQL",
+    "NoSQL",
+    "Git",
+    "Figma"
+  ],
+  "skillsSecondary": [
+    "TypeScript",
+    "Node.js",
+    "REST",
+    "JWT",
+    "Prisma",
+    "Stripe",
+    "Docker"
+  ],
+  "stats": {
+    "yearsExperience": "3+",
+    "projectsCompleted": "15+",
+    "technologies": "20+"
+  }
+}
+

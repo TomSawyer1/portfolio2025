@@ -1,0 +1,46 @@
+[
+  {
+    "id": "freelance",
+    "title": "Full-Stack Developer",
+    "company": "Freelance",
+    "location": "Remote",
+    "from": "2023-01",
+    "to": "present",
+    "highlights": [
+      "Conception et développement d'applications React/React Native modernes",
+      "Mise en place d'APIs sécurisées (JWT, Prisma, PostgreSQL)",
+      "CI/CD basique, revues de code et optimisation des performances",
+      "Collaboration avec designers pour créer des interfaces utilisateur intuitives",
+      "Intégration de solutions de paiement (Stripe) et services cloud"
+    ]
+  },
+  {
+    "id": "android-dev",
+    "title": "Android Developer (Java)",
+    "company": "Projet académique",
+    "location": "Paris",
+    "from": "2022-09",
+    "to": "2023-06",
+    "highlights": [
+      "Développement d'une application météo avec Retrofit et géolocalisation GPS",
+      "Architecture modulaire suivant les principes SOLID",
+      "Mise en place de tests unitaires et d'intégration",
+      "Déploiement interne pour démonstration et feedback utilisateurs"
+    ]
+  },
+  {
+    "id": "web-dev-intern",
+    "title": "Web Developer Intern",
+    "company": "Tech Startup",
+    "location": "Paris",
+    "from": "2022-01",
+    "to": "2022-08",
+    "highlights": [
+      "Développement de composants React réutilisables pour la plateforme",
+      "Contribution à l'amélioration de l'UI/UX avec Figma et TailwindCSS",
+      "Participation aux daily standups et méthodologie Agile",
+      "Optimisation des performances frontend (lazy loading, code splitting)"
+    ]
+  }
+]
+
