@@ -1,4 +1,4 @@
-# Portfolio 2025 — Spencer Thomas
+# Portfolio 2025 — Spencer Andrade Thomas
 
 Portfolio développeur moderne avec style **Borussia Dortmund (BVB)** — jaune & noir, dark mode par défaut, animations fluides, multilingue (FR/EN).
 
@@ -286,11 +286,11 @@ Ce projet est libre d'utilisation pour votre portfolio personnel.
 
 ## 👤 Auteur
 
-**Spencer Thomas** — Full-Stack Developer
+**Spencer Andrade Thomas** — Full-Stack Developer
 
-- GitHub: [@spencerthomas](https://github.com/spencerthomas)
-- LinkedIn: [Spencer Thomas](https://linkedin.com/in/spencer-thomas)
-- Email: contact@spencerthomas.dev
+- GitHub: [@TomSawyer1](https://github.com/TomSawyer1)
+- LinkedIn: [Spencer Andrade Thomas](https://www.linkedin.com/in/tavspencer/)
+- Email: thomas.andradeve@gmail.com
 
 ---
 
