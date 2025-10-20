@@ -28,14 +28,14 @@ export function Nav() {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="sticky top-0 z-50 border-b border-neutral-800/50 bg-bg-dark/80 backdrop-blur-lg"
+      className="sticky top-0 z-50 border-b border-neutral-800/50 bg-bg-dark/80 backdrop-blur-lg dark:border-neutral-800/50 dark:bg-bg-dark/80 light:border-neutral-300 light:bg-white/95 light:shadow-sm"
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link to="/" className="group flex items-center gap-2">
           <span className="text-2xl font-bold">
             <span className="gradient-text">ST</span>
-            <span className="text-neutral-100 group-hover:text-primary transition-colors">.</span>
+            <span className="text-neutral-100 group-hover:text-primary transition-colors dark:text-neutral-100 light:text-neutral-900">.</span>
           </span>
         </Link>
 
@@ -48,8 +48,8 @@ export function Nav() {
               className={cn(
                 'rounded-lg px-4 py-2 text-sm font-medium transition-all',
                 isActive(link.to)
-                  ? 'bg-primary/10 text-primary'
-                  : 'text-neutral-400 hover:bg-neutral-800/50 hover:text-primary'
+                  ? 'bg-primary/10 text-primary dark:text-primary-dark light:text-primary-light light:bg-primary-light/10'
+                  : 'text-neutral-400 hover:bg-neutral-800/50 hover:text-primary dark:text-neutral-400 dark:hover:bg-neutral-800/50 light:text-neutral-700 light:hover:bg-neutral-100 light:hover:text-primary-light'
               )}
             >
               {link.label}
@@ -59,7 +59,7 @@ export function Nav() {
 
         {/* Actions à droite */}
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <LangSwitch />
 
           {/* Menu mobile */}
@@ -70,7 +70,7 @@ export function Nav() {
                   {open ? <X className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
                 </Menu.Button>
 
-                <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-lg border border-neutral-800 bg-card-dark p-2 shadow-xl">
+                <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-lg border border-neutral-800 bg-card-dark p-2 shadow-xl dark:border-neutral-800 dark:bg-card-dark light:border-neutral-300 light:bg-white light:shadow-lg">
                   {links.map((link) => (
                     <Menu.Item key={link.to}>
                       {({ active }) => (
@@ -78,8 +78,9 @@ export function Nav() {
                           to={link.to}
                           className={cn(
                             'block rounded-md px-4 py-2 text-sm transition-colors',
-                            active && 'bg-primary/10 text-primary',
-                            isActive(link.to) && 'font-semibold text-primary'
+                            active && 'bg-primary/10 text-primary dark:bg-primary-dark/10 dark:text-primary-dark light:bg-primary-light/10 light:text-primary-light',
+                            isActive(link.to) && 'font-semibold text-primary dark:text-primary-dark light:text-primary-light',
+                            !active && !isActive(link.to) && 'text-neutral-300 dark:text-neutral-300 light:text-neutral-700'
                           )}
                         >
                           {link.label}
