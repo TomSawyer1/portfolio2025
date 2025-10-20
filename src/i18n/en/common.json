@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hey, I'm {{name}}",
+    "subtitle": "I craft clean, fast, and scalable web & mobile products.",
+    "ctaPrimary": "Contact me",
+    "ctaSecondary": "Download CV",
+    "statsYears": "Years of experience",
+    "statsProjects": "Projects completed",
+    "statsTech": "Technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A selection of my recent work",
+    "filter": "Filter by tag",
+    "search": "Search a project...",
+    "viewGithub": "View on GitHub",
+    "viewDemo": "Live demo",
+    "allProjects": "All projects",
+    "noResults": "No projects found"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Passionate about creating digital experiences",
+    "stackTitle": "Favorite stack",
+    "description": "Full-stack developer passionate about building modern web and mobile applications. I love turning ideas into real products, focusing on code quality, user experience, and performance.",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "tools": "Tools"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My professional journey",
+    "present": "Present",
+    "duration": "{{from}} — {{to}}"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a question? A project? Feel free to reach out",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll get back to you as soon as possible.",
+    "error": "An error occurred. Please try again.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Your message...",
+    "copyEmail": "Copy email",
+    "emailCopied": "Email copied!"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "madeWith": "Made with",
+    "by": "by"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "toggle": "Toggle theme"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English",
+    "toggle": "Switch language"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email",
+    "minLength": "Minimum {{min}} characters"
+  }
+}
+

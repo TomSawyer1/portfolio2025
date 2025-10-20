@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "about": "À propos",
+    "experience": "Expérience",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Hey, moi c'est {{name}}",
+    "subtitle": "Je conçois des produits web & mobile, propres, rapides et scalables.",
+    "ctaPrimary": "Me contacter",
+    "ctaSecondary": "Télécharger mon CV",
+    "statsYears": "Années d'expérience",
+    "statsProjects": "Projets réalisés",
+    "statsTech": "Technologies"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Une sélection de mes réalisations récentes",
+    "filter": "Filtrer par tag",
+    "search": "Rechercher un projet...",
+    "viewGithub": "Voir sur GitHub",
+    "viewDemo": "Démo live",
+    "allProjects": "Tous les projets",
+    "noResults": "Aucun projet trouvé"
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Passionné par la création d'expériences digitales",
+    "stackTitle": "Technologies préférées",
+    "description": "Développeur full-stack passionné par la création d'applications web et mobile modernes. J'aime transformer des idées en produits concrets, en mettant l'accent sur la qualité du code, l'expérience utilisateur et les performances.",
+    "skills": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "tools": "Outils"
+    }
+  },
+  "experience": {
+    "title": "Expérience",
+    "subtitle": "Mon parcours professionnel",
+    "present": "Aujourd'hui",
+    "duration": "{{from}} — {{to}}"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter",
+    "name": "Nom",
+    "email": "Email",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Message envoyé avec succès ! Je vous répondrai dans les plus brefs délais.",
+    "error": "Une erreur s'est produite. Veuillez réessayer.",
+    "namePlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.com",
+    "messagePlaceholder": "Votre message...",
+    "copyEmail": "Copier l'email",
+    "emailCopied": "Email copié !"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "madeWith": "Fait avec",
+    "by": "par"
+  },
+  "theme": {
+    "light": "Mode clair",
+    "dark": "Mode sombre",
+    "toggle": "Changer de thème"
+  },
+  "language": {
+    "fr": "Français",
+    "en": "English",
+    "toggle": "Changer de langue"
+  },
+  "errors": {
+    "required": "Ce champ est requis",
+    "invalidEmail": "Email invalide",
+    "minLength": "Minimum {{min}} caractères"
+  }
+}
+
