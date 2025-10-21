@@ -4,27 +4,60 @@ import { Card } from '@/components/Card'
 import { motion } from 'framer-motion'
 import siteData from '@/data/site.json'
 import { useTheme } from '@/lib/useTheme'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faReact, 
+  faNode, 
+  faVuejs, 
+  faJava, 
+  faAndroid, 
+  faDocker, 
+  faGitAlt, 
+  faFigma,
+  faStripe
+} from '@fortawesome/free-brands-svg-icons'
+import { 
+  faMobileAlt, 
+  faPalette, 
+  faDatabase, 
+  faLeaf, 
+  faTriangleExclamation, 
+  faBook, 
+  faCircle, 
+  faGlobe, 
+  faLock, 
+  faBolt, 
+  faCreditCard, 
+  faCode,
+  faLaptopCode,
+  faMobile,
+  faScrewdriverWrench,
+  faUsers,
+  faLightbulb,
+  faGraduationCap,
+  faListCheck
+} from '@fortawesome/free-solid-svg-icons'
 
 // Tech logos/icons mapping
-const techLogos: Record<string, string> = {
-  React: '⚛️',
-  'React Native': '📱',
-  TailwindCSS: '🎨',
-  Java: '☕',
-  Android: '🤖',
-  'Vue.js': '💚',
-  'Next.js': '▲',
-  SQL: '🗄️',
-  NoSQL: '🍃',
-  Git: '🔀',
-  Figma: '🎭',
-  TypeScript: '📘',
-  'Node.js': '🟢',
-  REST: '🌐',
-  JWT: '🔐',
-  Prisma: '⚡',
-  Stripe: '💳',
-  Docker: '🐋',
+const techLogos: Record<string, any> = {
+  React: faReact,
+  'React Native': faMobileAlt,
+  TailwindCSS: faPalette,
+  Java: faJava,
+  Android: faAndroid,
+  'Vue.js': faVuejs,
+  'Next.js': faTriangleExclamation, // Next.js n'a pas d'icône officielle FA
+  SQL: faDatabase,
+  NoSQL: faLeaf,
+  Git: faGitAlt,
+  Figma: faFigma,
+  TypeScript: faBook,
+  'Node.js': faNode,
+  REST: faGlobe,
+  JWT: faLock,
+  Prisma: faBolt,
+  Stripe: faStripe,
+  Docker: faDocker,
 }
 
 export function About() {
@@ -88,24 +121,24 @@ export function About() {
                 <div className="space-y-2">
                   <h3 className="font-semibold text-primary dark:text-primary-dark light:text-primary-light">Compétences clés :</h3>
                   <ul className="space-y-1 text-sm">
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faLaptopCode} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Développement full-stack (React, Node.js, Java)</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faMobile} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Applications mobiles (React Native, Android)</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faCode} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Architecture scalable et bonnes pratiques</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faPalette} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>UI/UX design avec Figma et TailwindCSS</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faGlobe} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Intégrations API et paiements (Stripe)</span>
                     </li>
                   </ul>
@@ -114,20 +147,20 @@ export function About() {
                 <div className="space-y-2">
                   <h3 className="font-semibold text-primary dark:text-primary-dark light:text-primary-light">Soft skills :</h3>
                   <ul className="space-y-1 text-sm">
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faUsers} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Communication et travail d'équipe</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faLightbulb} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Résolution de problèmes créative</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faGraduationCap} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Apprentissage continu et curiosité</span>
                     </li>
-                    <li className="flex gap-2">
-                      <span className="text-primary dark:text-primary-dark light:text-primary-light">▸</span>
+                    <li className="flex gap-2 items-start">
+                      <FontAwesomeIcon icon={faListCheck} className="text-primary dark:text-primary-dark light:text-primary-light mt-1 flex-shrink-0" />
                       <span>Méthodologie Agile</span>
                     </li>
                   </ul>
@@ -160,9 +193,10 @@ export function About() {
                           key={skill}
                           className="group flex flex-col items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-900/50 p-4 transition-all hover:border-primary/50 hover:bg-neutral-900 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-primary-dark/50 light:border-neutral-300 light:bg-neutral-50 light:hover:border-primary-light/50 light:hover:bg-neutral-100"
                         >
-                          <span className="text-3xl transition-transform group-hover:scale-110">
-                            {techLogos[skill] || '⚙️'}
-                          </span>
+                          <FontAwesomeIcon 
+                            icon={techLogos[skill] || faCode} 
+                            className="text-3xl transition-transform group-hover:scale-110 text-primary dark:text-primary-dark light:text-primary-light"
+                          />
                           <span className="text-center text-xs font-medium text-neutral-300 group-hover:text-primary dark:text-neutral-300 dark:group-hover:text-primary-dark light:text-neutral-700 light:group-hover:text-primary-light">
                             {skill}
                           </span>
