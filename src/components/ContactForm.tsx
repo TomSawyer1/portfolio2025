@@ -11,6 +11,7 @@ const createContactSchema = (t: (key: string, opts?: any) => string) =>
   z.object({
     name: z.string().min(2, t('errors.minLength', { min: 2 })),
     email: z.string().email(t('errors.invalidEmail')),
+    subject: z.string().min(3, t('errors.minLength', { min: 3 })),
     message: z.string().min(10, t('errors.minLength', { min: 10 })),
   })
 
@@ -37,10 +38,10 @@ export function ContactForm() {
     try {
       // Send email using EmailJS
       const templateParams = {
-        from_name: data.name,
-        from_email: data.email,
+        name: data.name,
+        email: data.email,
+        subject: data.subject,
         message: data.message,
-        to_name: 'Thomas Spencer',
       }
 
       await emailjs.send(
@@ -98,6 +99,23 @@ export function ContactForm() {
         />
         {errors.email && (
           <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+        )}
+      </div>
+
+      {/* Subject */}
+      <div>
+        <label htmlFor="subject" className="mb-2 block text-sm font-medium text-neutral-300 dark:text-neutral-300 light:text-neutral-700">
+          {t('contact.subject')}
+        </label>
+        <input
+          id="subject"
+          type="text"
+          placeholder={t('contact.subjectPlaceholder')}
+          className="input"
+          {...register('subject')}
+        />
+        {errors.subject && (
+          <p className="mt-1 text-sm text-red-500">{errors.subject.message}</p>
         )}
       </div>
 
