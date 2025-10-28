@@ -46,6 +46,10 @@
     "present": "Present",
     "duration": "{{from}} — {{to}}"
   },
+  "formation": {
+    "title": "Education",
+    "subtitle": "My academic journey"
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Have a question? A project? Feel free to reach out",
@@ -116,39 +120,34 @@
     }
   },
   "experienceData": {
-    "freelance": {
-      "title": "Full-Stack Developer",
-      "company": "Freelance",
-      "location": "Remote",
-      "highlights": [
-        "Design and development of modern React/React Native applications",
-        "Implementation of secure APIs (JWT, Prisma, PostgreSQL)",
-        "Basic CI/CD, code reviews and performance optimization",
-        "Collaboration with designers to create intuitive user interfaces",
-        "Integration of payment solutions (Stripe) and cloud services"
-      ]
-    },
-    "android-dev": {
-      "title": "Android Developer (Java)",
-      "company": "Academic Project",
+    "apprenti-fullstack": {
+      "title": "Apprentice Full Stack Developer",
+      "company": "Europcar Mobility Group",
       "location": "Paris",
       "highlights": [
-        "Development of a weather app with Retrofit and GPS geolocation",
-        "Modular architecture following SOLID principles",
-        "Implementation of unit and integration tests",
-        "Internal deployment for demo and user feedback"
+        "Creation and management of SQL databases",
+        "API development and data collection for front-end integration",
+        "Technical documentation writing and participation in code reviews"
       ]
     },
-    "web-dev-intern": {
-      "title": "Web Developer Intern",
-      "company": "Tech Startup",
+    "stage-frontend": {
+      "title": "Front-end Developer Internship",
+      "company": "Centre Medical Europe",
       "location": "Paris",
       "highlights": [
-        "Development of reusable React components for the platform",
-        "Contribution to UI/UX improvement with Figma and TailwindCSS",
-        "Participation in daily standups and Agile methodology",
-        "Frontend performance optimization (lazy loading, code splitting)"
+        "Design of a new information architecture",
+        "Development and integration of a modern and responsive design",
+        "Search engine optimization (SEO)",
+        "Optimization of ergonomics and user experience (UX)"
       ]
+    }
+  },
+  "formationData": {
+    "bachelor-webstart": {
+      "title": "Bachelor's Degree in Full Stack Web Development",
+      "school": "École Webstart",
+      "location": "Paris",
+      "subjects": "Main subjects: Web Development, Java Programming, Databases"
     }
   }
 }

@@ -46,6 +46,10 @@
     "present": "Aujourd'hui",
     "duration": "{{from}} — {{to}}"
   },
+  "formation": {
+    "title": "Formations",
+    "subtitle": "Mon parcours académique"
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter",
@@ -116,39 +120,34 @@
     }
   },
   "experienceData": {
-    "freelance": {
-      "title": "Full-Stack Developer",
-      "company": "Freelance",
-      "location": "Remote",
-      "highlights": [
-        "Conception et développement d'applications React/React Native modernes",
-        "Mise en place d'APIs sécurisées (JWT, Prisma, PostgreSQL)",
-        "CI/CD basique, revues de code et optimisation des performances",
-        "Collaboration avec designers pour créer des interfaces utilisateur intuitives",
-        "Intégration de solutions de paiement (Stripe) et services cloud"
-      ]
-    },
-    "android-dev": {
-      "title": "Android Developer (Java)",
-      "company": "Projet académique",
+    "apprenti-fullstack": {
+      "title": "Apprenti Développeur Full Stack",
+      "company": "Europcar Mobility Group",
       "location": "Paris",
       "highlights": [
-        "Développement d'une application météo avec Retrofit et géolocalisation GPS",
-        "Architecture modulaire suivant les principes SOLID",
-        "Mise en place de tests unitaires et d'intégration",
-        "Déploiement interne pour démonstration et feedback utilisateurs"
+        "Création et gestion de bases de données SQL",
+        "Développement d'une API et collecte de données pour intégration front-end",
+        "Rédaction de documentation technique et participation aux revues de code"
       ]
     },
-    "web-dev-intern": {
-      "title": "Web Developer Intern",
-      "company": "Tech Startup",
+    "stage-frontend": {
+      "title": "Stage Développeur Front-end",
+      "company": "Centre Medical Europe",
       "location": "Paris",
       "highlights": [
-        "Développement de composants React réutilisables pour la plateforme",
-        "Contribution à l'amélioration de l'UI/UX avec Figma et TailwindCSS",
-        "Participation aux daily standups et méthodologie Agile",
-        "Optimisation des performances frontend (lazy loading, code splitting)"
+        "Conception d'une nouvelle architecture de l'information",
+        "Développement et intégration d'un design moderne et responsive",
+        "Optimisation pour le référencement sur internet (SEO)",
+        "Optimisation de l'ergonomie et de l'expérience utilisateur (UX)"
       ]
+    }
+  },
+  "formationData": {
+    "bachelor-webstart": {
+      "title": "Bachelor Développeur Web Full Stack",
+      "school": "École Webstart",
+      "location": "Paris",
+      "subjects": "Principales matières : Développement Web, Programmation Java, Bases de données"
     }
   }
 }

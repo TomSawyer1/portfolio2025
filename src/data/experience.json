@@ -1,18 +1,12 @@
 [
   {
-    "id": "freelance",
-    "from": "2023-01",
-    "to": "present"
+    "id": "apprenti-fullstack",
+    "from": "2022-10",
+    "to": "2024-08"
   },
   {
-    "id": "android-dev",
-    "from": "2022-09",
-    "to": "2023-06"
-  },
-  {
-    "id": "web-dev-intern",
-    "from": "2022-01",
-    "to": "2022-08"
+    "id": "stage-frontend",
+    "from": "2021-05",
+    "to": "2021-09"
   }
 ]
-

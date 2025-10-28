@@ -11,17 +11,28 @@ interface TimelineItem {
 
 interface TimelineProps {
   items: TimelineItem[]
+  dataKey?: 'experienceData' | 'formationData'
 }
 
-export function Timeline({ items }: TimelineProps) {
+export function Timeline({ items, dataKey = 'experienceData' }: TimelineProps) {
   const { t } = useTranslation()
   
-  const getItemData = (id: string) => ({
-    title: t(`experienceData.${id}.title`),
-    company: t(`experienceData.${id}.company`),
-    location: t(`experienceData.${id}.location`),
-    highlights: t(`experienceData.${id}.highlights`, { returnObjects: true }) as string[]
-  })
+  const getItemData = (id: string) => {
+    if (dataKey === 'formationData') {
+      return {
+        title: t(`${dataKey}.${id}.title`),
+        company: t(`${dataKey}.${id}.school`),
+        location: t(`${dataKey}.${id}.location`),
+        highlights: [t(`${dataKey}.${id}.subjects`)]
+      }
+    }
+    return {
+      title: t(`${dataKey}.${id}.title`),
+      company: t(`${dataKey}.${id}.company`),
+      location: t(`${dataKey}.${id}.location`),
+      highlights: t(`${dataKey}.${id}.highlights`, { returnObjects: true }) as string[]
+    }
+  }
 
   const formatDate = (date: string) => {
     if (date === 'present') return t('experience.present')

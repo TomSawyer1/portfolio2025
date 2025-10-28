@@ -3,6 +3,7 @@ import { Section } from '@/components/Section'
 import { Timeline } from '@/components/Timeline'
 import { motion } from 'framer-motion'
 import experienceData from '@/data/experience.json'
+import formationData from '@/data/formation.json'
 
 export function Experience() {
   const { t } = useTranslation()
@@ -25,6 +26,16 @@ export function Experience() {
           transition={{ delay: 0.2 }}
         >
           <Timeline items={experienceData} />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-16"
+        >
+          <h2 className="text-3xl font-bold mb-8 dark:text-neutral-100 light:text-neutral-900">{t('formation.title')}</h2>
+          <Timeline items={formationData} dataKey="formationData" />
         </motion.div>
       </Section>
     </div>
